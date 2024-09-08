@@ -1,0 +1,12 @@
+# Local .terraform directories and module cache
+.terraform/
+
+# Terraform state files
+*.tfstate
+*.tfstate.backup
+
+# Ignore state-related directories (for remote state)
+terraform.tfstate.d/
+
+# Lock file used to ensure Terraform uses the same provider versions
+.terraform.lock.hcl
