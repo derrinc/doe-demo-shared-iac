@@ -21,6 +21,12 @@ variable "app_name" {
   description = "Name of the Cloud Run application"
 }
 
+variable "image" {
+  type        = string
+  description = "Placeholder docker image"
+  default     = "gcr.io/cloudrun/hello"
+}
+
 variable "env_vars" {
   type        = map(string)
   description = "Environment variables for the Cloud Run container"
@@ -84,5 +90,4 @@ variable "zone_description" {
   type        = string
   description = "A description for the DNS managed zone."
   default     = "Managed by Terraform"
-}
 }
