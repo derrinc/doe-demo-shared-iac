@@ -10,37 +10,9 @@ variable "region" {
   description = "The GCP region where resources will be created."
 }
 
-variable "repo_name" {
+variable "registry_name" {
   type        = string
   description = "The name of the Artifact Registry repository."
-}
-
-# Cloud Run variables
-variable "app_name" {
-  type        = string
-  description = "Name of the Cloud Run application"
-}
-
-variable "image" {
-  type        = string
-  description = "Placeholder docker image"
-  default     = "gcr.io/cloudrun/hello"
-}
-
-variable "env_vars" {
-  type        = map(string)
-  description = "Environment variables for the Cloud Run container"
-  default     = {}
-}
-
-variable "memory" {
-  type        = string
-  description = "Memory limit for Cloud Run service"
-}
-
-variable "cpu" {
-  type        = string
-  description = "CPU limit for Cloud Run service"
 }
 
 # Cloud Build variables
@@ -62,32 +34,4 @@ variable "terraform_sa_email" {
 variable "compute_service_account_id" {
   type        = string
   description = "The service account ID for Compute Engine or Cloud Run to use."
-}
-
-# Google Cloud DNS variables
-variable "cname_subdomains" {
-  type        = list(string)
-  description = "List of subdomains to create CNAME records for."
-}
-
-variable "zone_name" {
-  type        = string
-  description = "The name of the DNS managed zone."
-}
-
-variable "zone_dns_name" {
-  type        = string
-  description = "The DNS name of the managed zone, e.g., 'example.internal.'. Must end with a dot."
-}
-
-variable "zone_visibility" {
-  type        = string
-  description = "The visibility of the DNS managed zone. Options: 'public', 'private'."
-  default     = "private"
-}
-
-variable "zone_description" {
-  type        = string
-  description = "A description for the DNS managed zone."
-  default     = "Managed by Terraform"
 }
