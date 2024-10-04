@@ -5,8 +5,7 @@
 # ------------------------------
 terraform {
   backend "gcs" {
-    bucket = "holomua-terraform-state"
-    prefix = "env" # The base directory in the bucket; Terraform automatically appends the workspace name
+    bucket = "terraform-state-shared-bucket"
   }
 }
 
