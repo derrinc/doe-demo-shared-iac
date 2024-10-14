@@ -35,3 +35,14 @@ variable "compute_service_account_id" {
   type        = string
   description = "The service account ID for Compute Engine or Cloud Run to use."
 }
+
+# Cloud Run: Support for custom domains
+variable "custom_domain" {
+  type        = string
+  description = "The custom domain to be mapped to the Cloud Run service"
+}
+
+variable "cloud_run_service_name" {
+  type        = string
+  description = "The name of the Cloud Run service to map the domain to"
+}

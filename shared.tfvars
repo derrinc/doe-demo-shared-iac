@@ -9,3 +9,7 @@ terraform_sa_email         = "terraform-sa@holomua-doe-demo.iam.gserviceaccount.
 
 # Artifactory Registry
 registry_name = "doe-demo-container-registry"
+
+# Cloud Run custom domains
+custom_domain          = "holomuatech.online"
+cloud_run_service_name = "doe-demo-hello-world"
